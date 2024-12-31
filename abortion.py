@@ -20,9 +20,9 @@ x = abortData['% Yes']
 y = incomeData['Annual_Wage']
 
 plt.scatter(x, y)
-plt.title('Scatterplot of df1 vs df2')
-plt.xlabel('df1 values')
-plt.ylabel('df2 values')
+plt.title('Pecentage of "Yes" on 3 Votes and Average Income per MO County')
+plt.xlabel('Percentage of County that voted "Yes" on Amendment 3')
+plt.ylabel('Average Income of County')
 plt.grid(True)
 plt.show()
 
