@@ -13,11 +13,9 @@ incomeData = pd.DataFrame(income_csv)
 most_pro_choice = abortData["% Yes"].max()
 most_income = incomeData["Annual_Wage"].max()
 
-most_pro_choice_sorted = abortData.sort_values(by='% Yes')
-most_income_sorted = incomeData.sort_values(by='Annual_Wage')
+
 
 # Scatter plot part
-
 x = abortData['% Yes']
 y = incomeData['Annual_Wage']
 
@@ -29,5 +27,5 @@ plt.grid(True)
 plt.show()
 
 # r coefficent
-#r, _ = pearsonr(x, y)
-#print(r)
+r, _ = pearsonr(x, y)
+print(r)
