@@ -39,7 +39,7 @@ sm.set_array([])  # Required for adding colorbar
 cbar = plt.colorbar(sm, ax=ax)
 cbar.set_label('Value')
 
-ax.set_title('Missouri Heatmap by County', fontsize=16)
+ax.set_title('Amendment 3 Support by County', fontsize=16)
 
 plt.show()
 
