@@ -18,13 +18,13 @@ incomeData = pd.DataFrame(income_clean)
 norm = mcolors.Normalize(vmin=incomeData['Annual_Wage'].min(), vmax=incomeData['Annual_Wage'].max())
 
 # Define a colormap (shades of blue)
-cmap = plt.cm.Blues
+cmap = plt.cm.Reds
 
 # Create a dictionary to map county names to their values
 county_value_map = dict(zip(incomeData['County'], incomeData['Annual_Wage']))
 
 # Add a 'value' column to the GeoDataFrame by matching county names
-missouri['County'] = missouri['Annual_Wage'].map(county_value_map)
+missouri['Annual_Wage'] = missouri['NAME_VI'].map(county_value_map)
 
 # Assign colors based on the normalized values
 missouri['color'] = missouri['Annual_Wage'].apply(lambda x: cmap(norm(x)) if not np.isnan(x) else (1, 1, 1, 0))
